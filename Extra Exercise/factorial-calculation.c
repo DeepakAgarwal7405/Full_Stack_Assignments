@@ -1,16 +1,16 @@
 #include <stdio.h>
 
-int factorial(int n) {
+int recursive_factorial(int n) {
   
     // Base Case:
     if (n == 1) {
         return 1;
     }
-    return n * factorial(n - 1);
+    return n * recursive_factorial(n - 1);
 }
 
 
-int loopfactorial(int num) {
+int iterative_factorial(int num) {
     int fact = 1, i;
 
     
@@ -32,10 +32,10 @@ int main() {
         printf("Error! Factorial of a negative number doesn't exist.\\n");
     } 
     else {
-            int fact = loopfactorial(num);
-            printf("loopFactorial of %d is %d", num, fact);
+            int fact = iterative_factorial(num);
+            printf("Iterative_factorial of %d is %d", num, fact);
 
-            printf("\n Factorial of %d is %d", num, factorial(num));
+            printf("\n Recursive_Factorial of %d is %d", num, recursive_factorial(num));
         }
     return 0;
 }
